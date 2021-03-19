@@ -9,7 +9,7 @@ MySQL = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db/mysql/db.mysql'),
-        'NAME': 'django_dbprub',
+        'NAME': 'django_db',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',

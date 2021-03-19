@@ -12,8 +12,8 @@ class Employee(models.Model):
     age = models.PositiveIntegerField(default=0) # IntegerField valores enteros
     salary = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
     state = models.BooleanField(default=True)
-    avatar = models.ImageField(upload_tow='avatar/%Y/%m/%d', null=True, blank=True)
-    cvitae = models.FileField(upload_tow='cvitae/%Y/%m/%d', null=True, blank=True)
+    avatar = models.ImageField(upload_to='avatar/%Y/%m/%d', null=True, blank=True)
+    cvitae = models.FileField(upload_to='cvitae/%Y/%m/%d', null=True, blank=True)
 
     def __str__(self):
         return self.names

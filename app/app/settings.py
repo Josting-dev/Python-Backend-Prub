@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+import app.db as db
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -74,7 +76,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
+DATABASES = db.MySQL
 
     #'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
@@ -82,15 +84,14 @@ DATABASES = {
         #'NAME': es.path.join(BASE_DIR, 'db.sqlite3')
 
     #}
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_db',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
+    #'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'django_db',
+    #    'USER': 'root',
+    #    'PASSWORD': 'root',
+    #   'HOST': '127.0.0.1',
+    #    'PORT': '3306',
+    #}
 
 
 # Password validation
